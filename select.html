@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/cssTable01.css">        
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <div ng-app="myApp" ng-controller="customersCtrl">
+            <div>
+                <div>
+                    <br/>
+                    <select ng-model="selectClient">
+                        <option ng-repeat="x in names" ng-value="{{x}}">{{x.Name}}</option>
+                    </select>
+                    <h1>You selected: {{selectClient.Name}}</h1>
+                    <p>His Country is: {{selectClient.Country}}</p>
+                </div>                
+                <div>
+                    <br/>
+                    <select ng-model="selectClient2" ng-options="x.Name for x in names">
+                    </select>
+                    <h1>You selected: {{selectClient2.Name}}</h1>
+                    <p>His Country is: {{selectClient2.Country}}</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('customersCtrl', function($scope, $http) {
+                $http.get("datacustom.json")
+                .then(function (response) {$scope.names = response.data.records;});
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
