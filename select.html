@@ -22,6 +22,18 @@
                     <h1>You selected: {{selectClient2.Name}}</h1>
                     <p>His Country is: {{selectClient2.Country}}</p>
                 </div>
+                <div>
+                    <select ng-model="selectCar" ng-options="x for (x, y) in cars"></select>
+                    <h1>You selected: {{selectCar.brand}}</h1>
+                    <h2>Model: {{selectCar.model}}</h2>
+                    <h3>Color: {{selectCar.color}}</h3>
+                </div>
+                <div>
+                    <select ng-model="selectCar2" ng-options="y.model for (x, y) in cars"></select>
+                    <h1>You selected: {{selectCar2.brand}}</h1>
+                    <h2>Model: {{selectCar2.model}}</h2>
+                    <h3>Color: {{selectCar2.color}}</h3>   
+                </div>
             </div>
         </div>
         <script>
@@ -29,6 +41,11 @@
             app.controller('customersCtrl', function($scope, $http) {
                 $http.get("datacustom.json")
                 .then(function (response) {$scope.names = response.data.records;});
+                $scope.cars = {
+                    car01 : {brand : "Ford", model : "Mustang", color : "red"},
+                    car02 : {brand : "Fiat", model : "500", color : "white"},
+                    car03 : {brand : "Volvo", model : "XC90", color : "black"}
+                }
             });
         </script>
     </body>
