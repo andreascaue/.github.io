@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/cssTable01.css">        
-    </head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+        <title>Andreas Caue - Magalhaes</title>
+        <link rel="stylesheet" type="text/css" href="css/c01.css">      
+    </head>
     <body>
-        <div ng-app="myApp" ng-controller="customersCtrl">
-            <div>
+        <header>
+            <h1>Andreas Caue - Magalhaes</h1>
+        <h3></h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>       
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div ng-app="myApp" ng-controller="customersCtrl">
                 <div>
-                    <br/>
-                    <select ng-model="selectClient">
-                        <option ng-repeat="x in names" ng-value="{{x}}">{{x.Name}}</option>
-                    </select>
-                    <h1>You selected: {{selectClient.Name}}</h1>
-                    <p>His Country is: {{selectClient.Country}}</p>
-                </div>                
-                <div>
-                    <br/>
-                    <select ng-model="selectClient2" ng-options="x.Name for x in names">
-                    </select>
-                    <h1>You selected: {{selectClient2.Name}}</h1>
-                    <p>His Country is: {{selectClient2.Country}}</p>
-                </div>
-                <div>
-                    <select ng-model="selectCar" ng-options="x for (x, y) in cars"></select>
-                    <h1>You selected: {{selectCar.brand}}</h1>
-                    <h2>Model: {{selectCar.model}}</h2>
-                    <h3>Color: {{selectCar.color}}</h3>
-                </div>
-                <div>
-                    <select ng-model="selectCar2" ng-options="y.model for (x, y) in cars"></select>
-                    <h1>You selected: {{selectCar2.brand}}</h1>
-                    <h2>Model: {{selectCar2.model}}</h2>
-                    <h3>Color: {{selectCar2.color}}</h3>   
+                    <div>
+                        <br/>
+                        <select ng-model="selectClient">
+                            <option ng-repeat="x in names" ng-value="{{x}}">{{x.Name}}</option>
+                        </select>
+                        <h1>You selected: {{selectClient.Name}}</h1>
+                        <p>His Country is: {{selectClient.Country}}</p>
+                    </div>                
+                    <div>
+                        <br/>
+                        <select ng-model="selectClient2" ng-options="x.Name for x in names">
+                        </select>
+                        <h1>You selected: {{selectClient2.Name}}</h1>
+                        <p>His Country is: {{selectClient2.Country}}</p>
+                    </div>
+                    <div>
+                        <select ng-model="selectCar" ng-options="x for (x, y) in cars"></select>
+                        <h1>You selected: {{selectCar.brand}}</h1>
+                        <h2>Model: {{selectCar.model}}</h2>
+                        <h3>Color: {{selectCar.color}}</h3>
+                    </div>
+                    <div>
+                        <select ng-model="selectCar2" ng-options="y.model for (x, y) in cars"></select>
+                        <h1>You selected: {{selectCar2.brand}}</h1>
+                        <h2>Model: {{selectCar2.model}}</h2>
+                        <h3>Color: {{selectCar2.color}}</h3>   
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>    
+        <footer>
+            <p>&copy; 2023 By Andreas Caue - Magalhaes</p>
+        </footer>
         <script>
             var app = angular.module('myApp', []);
             app.controller('customersCtrl', function($scope, $http) {
@@ -48,11 +65,6 @@
                 }
             });
         </script>
-    </body>
+    </body>    
 </html>
-
-
-
-
-
 

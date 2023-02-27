@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.hero-image {
+	background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_960_720.jpg');
+	height: 400px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.hero-image h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.button {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.services {
+	background-color: #f2f2f2;
+	padding: 50px;
+	text-align: center;
+}
+
+.services h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.services p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.services ul {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.services li {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.services li i {
+	margin-right: 10px;
+	color: green;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
