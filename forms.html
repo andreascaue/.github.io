@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/cssTable01.css">
+        <title>Andreas Caue - Magalhaes</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <header>
+            <h1>Andreas Caue - Magalhaes</h1>
+        <h3></h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>       
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div ng-app="myApp" ng-controller="customersCtrl"> 
+                <form>
+                    Check to show the Field First Name:
+                    <input type="checkbox" ng-model="nyCheckVar" onclick="changestatus()">
+                    <div ng-show="nyCheckVar">
+                        First Name: <input type="text" ng-model="firstname">
+                        <h2>Your First Name is: {{firstname}}</h2> 
+                    </div>
+                    <div>
+                    Pick a pet:
+                        <br /><input type="radio" ng-model="myVar" value="dogs"> Dogs
+                        <br /><input type="radio" ng-model="myVar" value="cats"> Cats
+                        <br /><input type="radio" ng-model="myVar" value="rabbits"> Rabbits
+                        <h2>Your pet selected is: {{myVar}} </h2>
+                    </div>
+                    <div>
+                        Select a Movie:
+                        <select ng-model="mySelect">
+                            <option value="">
+                            <option value="Forest Gump">Forest Gump
+                            <option value="Marvel">Marvel
+                            <option value="DC">DF
+                        </select>
+                        <h2>Move selected is: {{mySelect}}</h2>
+                    </div>
+
+                    
+                </form>              
+            </div>
+        </section>    
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('customersCtrl', function($scope) {
+            $scope.firstname = "Andreas"
+            function changestatus() {
+                $scope.nyCheckVar = !$scope.nyCheckVar
+            }            
+        });
+        </script>
+        <footer>
+            <p>&copy; 2023 By Andreas Caue - Magalhaes</p>
+        </footer>
+    </body>
+</html>
