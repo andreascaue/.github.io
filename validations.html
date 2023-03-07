@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+        <title>Andreas Caue - Magalhaes</title>
+        <link rel="stylesheet" href="css/style.css">     
+    </head>
+    <body>
+        <header>
+            <h1>Andreas Caue - Magalhaes</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>       
+                </ul>
+            </nav>
+        </header>
+        <section>     
+            <p>Try writing in the input field:</p>            
+            <form name="myForm1">
+                <input name="myInput" ng-model="myInput" required>
+                <span style="color:red" ng-show="myForm1.myInput.$dirty && myForm1.myInput.$error.required">
+                    This field is required.
+                </span>
+            </form>            
+            <p>The input's valid state is:</p>
+            <h1>{{myForm1.myInput.$valid}}</h1>
+        </section> 
+        <section>
+            <p>Try writing in the input email field:</p>  
+            <form name="myFormEmail">
+                <input name="myInputEmail" ng-model="myInputEmail" type="email">
+                <span style="color:red" ng-show="myFormEmail.myInputEmail.$dirty && myFormEmail.myInputEmail.$invalid">
+                    <span ng-show="myFormEmail.myInputEmail.$error.required">Email is required.</span>
+                    <span ng-show="myFormEmail.myInputEmail.$error.email">Invalid email address.</span>
+                </span>
+              </form>
+              
+              <p>The email's valid state is:</p>
+              <h1>{{myFormEmail.myInputEmail.$valid}}</h1>
+        </section>          
+        <section>            
+            <h2>Validation Example</h2>
+            <form ng-controller="validateCtrl" name="myForm" novalidate>
+
+                <p>Username:<br>
+                    <input type="text" name="user" ng-model="user" required>
+                    <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                        <span ng-show="myForm.user.$error.required">Username is required.</span>
+                    </span>
+                </p>
+
+                <p>Email:<br>
+                    <input type="email" name="email" ng-model="email" required>
+                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.required">Email is required.</span>
+                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                </p>
+
+                <p>
+                    <input type="submit"
+                    ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+                    myForm.email.$dirty && myForm.email.$invalid">
+                </p>
+
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; {{ currentDate | date:"yyyy"}} By Andreas Caue - Magalhaes</p>
+        </footer>
+        <script>
+         var app = angular.module('myApp', []);
+                app.controller('validateCtrl', function($scope) {
+                $scope.user = 'John Doe';
+                $scope.email = 'john.doe@gmail.com';
+                $scope.currentDate = new Date();
+            });
+        </script>
+    </body>    
+</html> 

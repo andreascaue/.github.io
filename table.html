@@ -2,29 +2,55 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/cssTable01.css">
+        <title>Andreas Caue - Magalhaes</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <body>
-        <div ng-app="myApp" ng-controller="customersCtrl"> 
-            <div>
-                <table>
-                <tr ng-repeat="x in names | orderBy : 'Country'">
-                    <td ng-if="$odd" style="background-color:#7f7e7e">
-                        {{ $index + 1 }}</td>
-                    <td ng-if="$even">
-                        {{ $index + 1 }}</td>
-                    <td ng-if="$odd" style="background-color:#7f7e7e">
-                        {{ x.Name }}</td>
-                    <td ng-if="$even">
-                        {{ x.Name }}</td>
-                    <td ng-if="$odd" style="background-color:#7f7e7e">
-                        {{ x.Country }}</td>
-                    <td ng-if="$even">
-                        {{ x.Country }}</td>
-                </tr>
-                </table>
+        <header>
+            <h1>Andreas Caue - Magalhaes</h1>
+        <h3></h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>       
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div ng-app="myApp" ng-controller="customersCtrl"> 
+                <div>
+                    <table>
+                    <tr>
+                        <th>
+                            INDEX
+                        </th>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            COUNTRY   
+                        </th>    
+                    </tr>    
+                    <tr ng-repeat="x in names | orderBy : 'Country'">
+                        <td ng-if="$odd" style="background-color:#7f7e7e">
+                            {{ $index + 1 }}</td>
+                        <td ng-if="$even">
+                            {{ $index + 1 }}</td>
+                        <td ng-if="$odd" style="background-color:#7f7e7e">
+                            {{ x.Name }}</td>
+                        <td ng-if="$even">
+                            {{ x.Name }}</td>
+                        <td ng-if="$odd" style="background-color:#7f7e7e">
+                            {{ x.Country }}</td>
+                        <td ng-if="$even">
+                            {{ x.Country }}</td>
+                    </tr>
+                    </table>
+                </div>
             </div>
-        </div>
+        </section>    
         <script>
         var app = angular.module('myApp', []);
         app.controller('customersCtrl', function($scope, $http) {
@@ -32,5 +58,8 @@
             .then(function (response) {$scope.names = response.data.records;});
         });
         </script>
+        <footer>
+            <p>&copy; 2023 By Andreas Caue - Magalhaes</p>
+        </footer>
     </body>
 </html>

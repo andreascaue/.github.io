@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <head>
+    <meta charset="UTF-8">
     <title>Andreas Caue - Magalhaes</title>
-
-    <link rel="stylesheet" href="css/c01.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <nav>
+        <a href="#" class="logo">Andreas Caue - Magalhaes</a>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>       
         </ul>
-      </nav>
+      </nav>      
     </header>
-    <main>
-      <h3></h3>
-      <section id="about">
-        <h2>About</h2>
-        <p>Welcome to my GitHub Pages website!</p>
-      </section>
-      <section id="services">
-        <h2>Services</h2>
-        <p>I offer the following services:</p>
+	<section class="services">
+		<div class="container">
+			<div class="hero-text">
+				<h1>Welcome to my landing page</h1>
+				<p>Learn more about AngularJS below</p>
+				<a href="#" class="button">Learn More</a>
+			</div>
+		</div>
+	</section>
+    <section class="services">
+      <div class="container">
+        <h2>My Examples</h2>
+        <p>This section showcases a variety of examples that demonstrate the different features and functionalities of 
+			AngularJS. Each example is accompanied by a detailed explanation and code snippets, 
+			making it easy for users to understand and implement the code in their own projects. 
+			The examples cover a range of topics such as data binding, directives, controllers, 
+			services, and routing. Whether users are beginners or experienced developers, 
+			the AngularJS Examples section offers something for everyone, providing a useful 
+			reference for those looking to improve their skills and develop better applications with AngularJS.</p>
         <ul>
-          <li>Web design</li>
-          <li>Web development</li>
-          <li>Search engine optimization</li>
+          <li><i class="fas fa-check"></i> <a href="time.html">Time</a></li>
+          <li><i class="fas fa-check"></i> <a href="table.html">Table</a></li>
+          <li><i class="fas fa-check"></i> <a href="select.html">Select</a></li>
+          <li><i class="fas fa-check"></i> <a href="events.html">Events</a></li>
+          <li><i class="fas fa-check"></i> <a href="forms.html">Forms</a></li>
+          <li><i class="fas fa-check"></i> <a href="validations.html">Validation</a></li>
         </ul>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at:</p>
-        <p><a href="mailto:andreascauecm@gmail.com">andreascauecm@gmail.com</a></p>
-      </section>
+      </div>
+    </section>
 
-      <section id="menu">
-        <h2>Time Manipulation</h2>      
-        <p><a href="time.html">Time</a></p>
-      </section>
-
-      <section id="menu">
-        <h2>Table</h2>      
-        <p><a href="table.html">Table</a></p>
-      </section>
-
-      <secttion id="select">
-        <h2>Select</h2>
-        <p><a href="select.html">Select</a></p>
-      </secttion>
-
-    </main>
-
-    <script src="js/script01.js"></script>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 By Andreas Caue - Magalhaes</p>
+      </div>
+    </footer>
   </body>
 </html>
