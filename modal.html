@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal Window Example</title>
+	<!-- Add the CSS for the modal window -->
+	<link rel="stylesheet" type="text/css" href="modal.css">
+</head>
+<body>
+	<!-- Add the "Contact" button -->
+	<a href="#" class="hero__btn">Contact</a>
+
+	<!-- Add the modal window container -->
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+	    <!-- Add the modal window content -->
+	    <h2><img src="https://chart.googleapis.com/chart?cht=qr&chl=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AMAGALHAES%3BANDREAS%0AFN%3AANDREAS%20MAGALHAES%0AADR%3A%3B%3B%3B%3B%3B%3B%0ATEL%3BWORK%3BVOICE%3A%0ATEL%3BCELL%3A%0ATEL%3BFAX%3A%0AEMAIL%3BWORK%3BINTERNET%3Aandreascauecm%40gmail.com%0AURL%3Ahttp%3A%2F%2Fandreascauecm.com%0AEND%3AVCARD&chs=180x180&choe=UTF-8&chld=L|2" rel="nofollow" alt="qr code"><a href="www.qr-code-generator.com/free-generator/?gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh0eXPdHvD8ifUpLE-qYGYRB2D5fWutN4CAX82TORl5r0CbnKv5JX0AaAtewEALw_wcB&campaignid=9765521724&adgroupid=106561035304&cpid=a64f8500-d236-443c-961c-a78e4b667661&gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh0eXPdHvD8ifUpLE-qYGYRB2D5fWutN4CAX82TORl5r0CbnKv5JX0AaAtewEALw_wcB" border="0" style="cursor:default" rel="nofollow">Contact me</a></h2>
+	    <p>Please fill out the form below to get in touch with us:</p>
+	    <form>
+	    	<label for="name">Name:</label>
+	    	<input type="text" id="name" name="name"><br><br>
+	    	<label for="email">Email:</label>
+	    	<input type="email" id="email" name="email"><br><br>
+	    	<label for="message">Message:</label>
+	    	<textarea id="message" name="message"></textarea><br><br>
+	    	<input type="submit" value="Submit">
+	    </form>
+	  </div>
+	</div>
+
+	<!-- Add the JavaScript to show and hide the modal window -->
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.querySelector(".hero__btn");
+
+		// When the user clicks on the button, open the modal
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		}
+	</script>
+</body>
+</html>
