@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Andreas Caue - Magalhaes </title>
+    <title> Andreas </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">  
         <meta name="author" content="Andreas Caue - Magalhaes">
         <meta name="description" content="Welcome to my personal website! This website serves as a showcase for my abilities, interests, and accomplishments. You'll find information about my background, education, work experience, portfolio and project samples here. I hope you find something of interest here, whether you're a potential employer, a colleague, or just someone who happened upon my website. Thank you for stopping by!">
         <meta name="keywords" content="html5, css, Angular, JavaScript">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type='text/css'>
         
-      <link rel="stylesheet" href="style/normalize.css">
-      <link rel="stylesheet" href="style/main.css">      
+      <link rel="stylesheet" href="../style/normalize.css">
+      <link rel="stylesheet" href="../style/main.css">      
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo-text">Andreas Caue - Magalhaes</a>
+      <a href="index.html" class="logo-text">Andreas</a>
       
       <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
       
@@ -41,42 +43,37 @@
         Welcome to my landing page
       </h1>
       <p class="hero__text">My personal site showcases my passions and achievements.</p>
-      
-      <button onclick="openModal()" class="hero__btn">Contact</button>
-      <iframe id="modalFrame" src="modal.html" style="display: none;"></iframe>     
+      <a href="#" class="hero__btn">Contact</a>                      
     </section>
 
-	 <section class="content">
-		<div class="container">
-			<div class="hero-text">
-				<h1>Welcome to my landing page</h1>
-				<p>Learn more about AngularJS below</p>
-				<a href="#" class="button">Learn More</a>
-			</div>
-		</div>
-	</section>
+	 
 
    <section class="content">
       <div class="container">
         <article>
         <h2>My Examples</h2>
-        <p>This section showcases a variety of examples that demonstrate the different features and functionalities of 
-			AngularJS. Each example is accompanied by a detailed explanation and code snippets, 
-			making it easy for users to understand and implement the code in their own projects. 
-			The examples cover a range of topics such as data binding, directives, controllers, 
-			services, and routing. Whether users are beginners or experienced developers, 
-			the AngularJS Examples section offers something for everyone, providing a useful 
-			reference for those looking to improve their skills and develop better applications with AngularJS.</p>
-        </article>
-        <ul>
-          <li><i class="fas fa-check"></i> <a href="time.html">Time</a></li>
-          <li><i class="fas fa-check"></i> <a href="table.html">Table</a></li>
-          <li><i class="fas fa-check"></i> <a href="select.html">Select</a></li>
-          <li><i class="fas fa-check"></i> <a href="events.html">Events</a></li>
-          <li><i class="fas fa-check"></i> <a href="forms.html">Forms</a></li>
-          <li><i class="fas fa-check"></i> <a href="validations.html">Validation</a></li>
-        </ul>
+        <p>This page shows a ToDo List application.</p>
+        </article>       
       </div>
+      <div ng-app="myTodoList" nb-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
+        <header class="w3-container w3-light-grey w3-padding-16"> 
+            <h3>MY TODO LIST</h3>
+        </header>
+        <ul>
+            <li ng-repeat="x in todo" class="w3-padding-16"> {{x}} <span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">x</span></li>
+        </ul>
+        <div class="w3-container w3-light-grey w3-padding-16">
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s10">                    
+                    <input ng-model="addNew">
+                </div>
+                <div class="w3-col s2">    
+                    <button ng-click="addItem()">Add</button>
+                </div>
+            </div>
+            <p class="w3-text-red"> {{errorText}} </p>
+        </div>
+    </div>	
     </section>
 
     <footer class="footer">
@@ -93,11 +90,8 @@
       </div>
   </footer>
   
-  <script src="js/menu.js"></script>        
-  <script src="js/main.js"></script>
+  <script src="../js/menu.js"></script>        
+  <script src="../js/main.js"></script>
   <script src="todo.js"></script>
-  <script src="js/modal.js"></script>
- 
-
   </body>
 </html>
