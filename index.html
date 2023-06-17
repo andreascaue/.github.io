@@ -2,23 +2,23 @@
 <html>
   <head>
     <title> Andreas Caue - Magalhaes </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
-        <meta name="author" content="Andreas Caue - Magalhaes">
-        <meta name="description" content="Welcome to my personal website! This website serves as a showcase for my abilities, interests, and accomplishments. You'll find information about my background, education, work experience, portfolio and project samples here. I hope you find something of interest here, whether you're a potential employer, a colleague, or just someone who happened upon my website. Thank you for stopping by!">
-        <meta name="keywords" content="html5, css, Angular, JavaScript">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="author" content="Andreas Caue - Magalhaes">
+    <meta name="description" content="Welcome to my personal website! This website serves as a showcase for my abilities, interests, and accomplishments. You'll find information about my background, education, work experience, portfolio and project samples here. I hope you find something of interest here, whether you're a potential employer, a colleague, or just someone who happened upon my website. Thank you for stopping by!">
+    <meta name="keywords" content="html5, css, Angular, JavaScript">
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        
-      <link rel="stylesheet" href="style/normalize.css">
-      <link rel="stylesheet" href="style/main.css">      
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">      
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo-text">Andreas Caue - Magalhaes</a>
+      <a href="index.html" class="logo-text">Andreas</a>
       
       <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
       
@@ -26,10 +26,11 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#">JavaScript</a></li>
-          <li><a href="#">AngularJS</a></li>
+          <li><a href="angularJS/todoList.html">AngularJS</a></li>
           <li><a href="#">Angular</a></li>
           <li><a href="#">React</a></li>
           <li><a href="#">C#</a></li>
+          <li><a href="#">Python</a></li>
           <li><a href="#">About</a></li>
           <li><a href="mailto:andreascauecm@gmail.com">Contact</a></li>
         </ul>
@@ -38,49 +39,37 @@
 
     <section class="hero">            
       <h1 class="hero__title">            
-        Welcome to my landing page
+        ANDREAS CAUE - MAGALHAES
       </h1>
-      <p class="hero__text">Gutful of bottlo no dramas he's got a massive hooroo.</p>
-      <a href="#" class="hero__btn">Buy it now</a>                      
+      <p class="hero__text">My personal site showcases my passions and achievements.</p>    
+      <button onclick="openModal()" class="hero__btn">Contact</button>
+      <iframe id="modalFrame" src="modal.html" style="display: none;"></iframe>     
     </section>
 
-	 <section class="content">
-		<div class="container">
-			<div class="hero-text">
-				<h1>Welcome to my landing page</h1>
-				<p>Learn more about AngularJS below</p>
-				<a href="#" class="button">Learn More</a>
-			</div>
-		</div>
-	</section>
-
-   <section class="content">
+    <section class="content">
       <div class="container">
-        <article>
-        <h2>My Examples</h2>
-        <p>This section showcases a variety of examples that demonstrate the different features and functionalities of 
-			AngularJS. Each example is accompanied by a detailed explanation and code snippets, 
-			making it easy for users to understand and implement the code in their own projects. 
-			The examples cover a range of topics such as data binding, directives, controllers, 
-			services, and routing. Whether users are beginners or experienced developers, 
-			the AngularJS Examples section offers something for everyone, providing a useful 
-			reference for those looking to improve their skills and develop better applications with AngularJS.</p>
-        </article>
-        <ul>
-          <li><i class="fas fa-check"></i> <a href="time.html">Time</a></li>
-          <li><i class="fas fa-check"></i> <a href="table.html">Table</a></li>
-          <li><i class="fas fa-check"></i> <a href="select.html">Select</a></li>
-          <li><i class="fas fa-check"></i> <a href="events.html">Events</a></li>
-          <li><i class="fas fa-check"></i> <a href="forms.html">Forms</a></li>
-          <li><i class="fas fa-check"></i> <a href="validations.html">Validation</a></li>
-        </ul>
+        <div class="hero-text">
+          <h1>Welcome!</h1>
+          <p>
+            Experienced Software Engineer Specializing in Agile Development and Full-Stack Technologies
+
+            Welcome to my landing page! I'm an accomplished software engineer with a strong background in Agile development methodologies and expertise in a wide range of technologies, including .NET, C#, PYTHON, REACT, Angular, AngularJS, JQuery, JavaScript, and SQL Server.
+            
+            With over 13 years of experience as a results-driven programmer analyst, I have successfully delivered numerous projects on time and within budget, consistently meeting and exceeding client expectations.
+            
+            I have a solid foundation in JavaScript, C#, PYTHON, and SQL Server, and I continuously seek to expand my knowledge and stay up-to-date with the latest industry advancements. By combining my technical expertise with my dedication to ongoing learning, I ensure that I can tackle complex challenges with efficiency and innovation.
+            
+            Throughout my career, I have earned a reputation for professionalism, productivity, and reliability. Whether working independently or collaboratively, I consistently keep the organization's primary objectives in mind. I possess strong problem-solving skills and can swiftly identify, address, and resolve issues, ensuring minimal disruption to business operations.
+            
+            If you're looking for a skilled software engineer who can deliver high-quality solutions and contribute to your team's success, please don't hesitate to reach out. Let's discuss how I can help drive your projects forward and achieve your business goals.
+          </p>        
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
         <h2 class="footer__logo">&copy; 2023 By Andreas Caue - Magalhaes</h2>
-
         <ul class="footer__links">
           <li><a href="#">List One</a></li>
           <li><a href="#">Page Two</a></li>
@@ -89,9 +78,12 @@
           <li><a href="#">Contact Me</a></li>
         </ul>
       </div>
-  </footer>
-  
-  <script src="js/menu.js"></script>        
-  <script src="js/main.js"></script>
+    </footer>
+
+    <script src="js/menu.js"></script>        
+    <script src="js/main.js"></script>
+    <script src="todo.js"></script>
+    <script src="js/modal.js"></script>
+
   </body>
 </html>

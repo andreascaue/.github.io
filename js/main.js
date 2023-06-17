@@ -24,3 +24,8 @@
         btnNext: '.next'
     })
 })()
+
+
+function openModal() {
+    document.getElementById("modalFrame").style.display = "block";
+  }
