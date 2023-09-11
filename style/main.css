@@ -13,6 +13,7 @@ img{
     padding-left: 1em;
     padding-right: 1em;
     max-width: 980px;
+    text-align: justify;
 }
 
 .header{
@@ -114,10 +115,6 @@ img{
 .js .laptop-slider .next{
     right: 10px;
 }
-
-
-
-
 
 .js .quote-slideshow{
     position: relative;
