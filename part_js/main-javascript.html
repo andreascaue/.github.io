@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Examples</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/normalize.css">
+    <link rel="stylesheet" href="../style/main.css">  
+    <link rel="stylesheet" href="/style/main.css">    
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo-text">Andreas</a>
+      
+      <button style="display: none;" class="header__btnMenu"> <i class="fas fa-bars fa-2x"></i> <span class="sr-only">Menu</span></button>
+      
+      <nav class="header__nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../part_js/main-javascript.html">JavaScript</a></li>
+          <li><a href="../part_angularJS/main-angularjs.html">AngularJS</a></li>
+          <li><a href="../part_angular/main-angular.html">Angular</a></li>
+          <li><a href="../part_react/main-react.html">React</a></li>
+          <li><a href="../part_csharp/main-csharp.html">C#</a></li>
+          <li><a href="../part_python/main-python.html">Python</a></li>
+          <li><a href="../part_blockChain/main-blockChain.html">BlockChain</a></li>
+          <li><a href="../part_jquery/main-jquery.html">JQuery</a></li>
+          <li><a href="../part_about/main-about.html">About</a></li>
+          <li><a href="../part_contact/main-contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>  
+
+
+    <section class="hero">
+      <!-- Hero content (same as in index.html) -->
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <h1>JavaScript Examples</h1>
+        <!-- Add your JavaScript examples content here -->
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="menu" id="menu">
+          <span class="toggle-button" onclick="toggleMenu()">☰</span>
+          <h2>Menu</h2>
+          <ul>
+              <li><a href="#" onclick="showExample('example1')">Example 1</a></li>
+              <li><a href="#" onclick="showExample('example2')">Example 2</a></li>
+              <li><a href="#" onclick="showExample('example3')">Example 3</a></li>
+          </ul>
+      </div>
+      <div class="content">
+          <h1>Welcome to Main Page</h1>
+          <div id="example1" style="display: none;">
+              <!-- Content for Example 1 -->
+              <h2>Example 1</h2>
+              <p>This is the content for Example 1.</p>
+          </div>
+          <div id="example2" style="display: none;">
+              <!-- Content for Example 2 -->
+              <h2>Example 2</h2>
+              <p>This is the content for Example 2.</p>
+          </div>
+          <div id="example3" style="display: none;">
+              <!-- Content for Example 3 -->
+              <h2>Example 3</h2>
+              <p>This is the content for Example 3.</p>
+          </div>
+      </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer__logo">&copy; 2021 By Andreas Caue - Magalhaes</h2>
+      <ul class="footer__links">
+        <li><a href="https://github.com/andreascaue">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/andreascaue/">Linkedin</a></li>
+        <li><a href="https://twitter.com/andreascaue">Twitter</a></li>
+        <li><a href="https://www.facebook.com/andreascaue.cabralmagalhaes">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="../part_contact/main-contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </footer> 
+  <script src="js/main.js"></script>
+  </body>
+</html>
