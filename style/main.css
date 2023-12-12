@@ -13,6 +13,7 @@ img{
     padding-left: 1em;
     padding-right: 1em;
     max-width: 980px;
+    text-align: justify;
 }
 
 .header{
@@ -114,10 +115,6 @@ img{
 .js .laptop-slider .next{
     right: 10px;
 }
-
-
-
-
 
 .js .quote-slideshow{
     position: relative;
@@ -249,7 +246,21 @@ img{
     font-size: 14px;    
 }
 
-
+.image-and-text {
+    display: flex;
+    align-items: center; /* Vertically center content */
+  }
+  
+  .image {
+    flex: 1; /* Grow to take available space */
+    margin-right: 20px; /* Add some spacing between image and text */
+  }
+  
+  .text {
+    flex: 2; /* Grow to take available space */
+    text-align: justify;
+  }
+  
 
 .content{
     background: #f8f9f9;
